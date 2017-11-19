@@ -1,0 +1,44 @@
+
+{
+  "bridge": {
+    "name": "Pi-Homebridge",
+    "username": "CC:22:3D:E3:CE:30",
+    "port": 51826,
+    "pin": "031-45-154"
+  },
+
+  "description": "Homebridge sensor configuration file.",
+
+  "accessories": [
+    {
+      "accessory": "SensorDataFile",
+      "name": "Pool Sensor",
+      "manufacturer" : "TFA",
+      "model" : "Venice",
+      "serialNumber" : "12345",
+      "batteryWarningThreshold" : 25.0,
+      "description": "Swimming Pool temperature sensor",
+      "temperatureFilePath": "/tmp/pool-temperature",
+      "batteryFilePath": "/tmp/pool-temperature-battery"
+    },
+
+    {
+      "accessory": "SensorDataFile",
+      "name": "OutDoor sensor",
+      "manufacturer" : "TFA",
+      "model" : "30,3208,02",
+      "serialNumber" : "12345",
+      "batteryWarningThreshold" : 25.0,
+      "description": "Outdoor temperature sensor",
+      "temperatureFilePath": "/tmp/outdoor-temperature",
+      "humidityFilePath": "/tmp/outdoor-humidity",
+      "batteryFilePath": "/tmp/outdoor-temperature-battery"
+    }
+
+
+  ],
+
+  "platforms": [
+  ]
+}
+
